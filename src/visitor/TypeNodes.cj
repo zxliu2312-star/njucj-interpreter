@@ -13,6 +13,9 @@ public open class TypeNode <: Node {
     private var typeParameterName_: Token = Token()
     private var typeName_: Token = Token()
 
+    // 方便直接获取类型
+    private var resolvedType_: ?Type = None
+
     public init() {
         this(NodeId())
     }
@@ -54,6 +57,16 @@ public open class TypeNode <: Node {
         }
         set(v) {
             typeName_ = v
+        }
+    }
+
+    // 新增，获取类型
+    public mut prop resolvedType: ?Type {
+        get() {
+             resolvedType_ 
+        }
+        set(v) { 
+            resolvedType_ = v 
         }
     }
 }

@@ -1,6 +1,5 @@
-main(){
-    var a = 0;
-    var b = 1;
-    var i = 2;
-    b + i
+main() {
+    var x
+    x = 10
+    x = "abc"     // ASSIGN_TYPE_MISMATCH
 }

@@ -35,3 +35,13 @@ public class Executor {
         lab1SimpleEvaluation(program)
     }
 }
+
+// 新增关于while控制流的类
+public class BreakException <: Exception {
+
+}
+
+
+public class ContinueException <: Exception {
+
+}

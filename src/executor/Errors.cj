@@ -36,6 +36,11 @@ public enum ErrorCode {
     | DUPLICATED_DEF // 试图在同一静态作用域内定义同名变量。
     | DEF_TYPE_MISMATCH // 变量定义时，赋值的类型与声明的类型不匹配。
     | UNINITIALIZED_VAR // 试图读取未初始化的变量的值。
+
+    //自己加的
+    | MISSING_MAIN // 没有main函数
+    | UNSUPPORTED // 不支持的或还没实现的
+    | LITERAL_TYPE_MISMATCH // 不支持的lieral
 }
 
 public class CjcjRuntimeErrorWithLocation <: Exception {
@@ -49,3 +54,5 @@ public class CjcjRuntimeErrorWithLocation <: Exception {
         "Error at line ${getPosition(fromWhere).line}: [${code.toString()[10..]}]: ${extraMessage}" // [10..] removes "ErrorCode."
     }
 }
+
+
